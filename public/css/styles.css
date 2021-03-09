@@ -1,0 +1,218 @@
+body {
+    font-family: Raleway, Montserrat, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 70rem;
+}
+
+h1 {
+    font-family: Raleway, sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Home */
+
+.home-nav {
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 100px;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: black;
+}
+
+.nav-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    width: 60%;
+}
+
+.logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 14%;
+    height: 100%;
+}
+
+.flower {
+    background-image: url(../img/flower.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flower h1 {
+    font-family: raleway, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 20%;
+    font-size: 25px;
+}
+
+.brushes {
+    background-image: url(../img/brushes.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.brushes-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    padding-right: 50px;
+    text-align:  justify;
+    color: #6B4400;
+}
+
+.tree {
+    background-image: url(../img/tree.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tree-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    padding: 0 20px;
+    text-align:  center;
+    color: white;
+    /* background-color: rgba(255, 255, 255, 0.75); */
+}
+
+.materials {
+    background-image: url(../img/materials.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.materials-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    padding-right: 50px;
+    text-align:  justify;
+    color: #000000;
+}
+
+/* Materials */
+
+.bg {
+    background-image: url('../img/flower.png');
+    background-size: cover;
+    /* height: 100vh; */
+    width: 100vw;
+    /* position: fixed; */
+    
+}
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.page-nav {
+    background-color: white;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    color: black;
+}
+
+.page-title {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.page-title h5 {
+    text-align: center;
+}
+
+.accepted {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -99990;
+    
+}
+
+.accepted-content {
+    background-color: white;
+    /* background-image: url('../img/check_circle_outline-black-18dp.svg') ; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: black;
+    height: 100rem;
+    width: 80vw;
+    font-weight: bold;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: center; */
+    padding-top: 30px;
+    text-align: center;
+    margin: 200px auto 200px;
+}
+
+.accepted-bg {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    background-color: #0194213a;
+}
