@@ -25,6 +25,7 @@ a {
 
 .home-nav {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(50px);
     height: 100px;
     width: 100vw;
     position: fixed;
@@ -33,6 +34,7 @@ a {
     justify-content: space-around;
     padding: 10px 0;
     color: black;
+    z-index: 9999;
 }
 
 .nav-content {
@@ -49,19 +51,26 @@ a {
     background-size: contain;
     background-position: center;
     width: 14%;
-    height: 100%;
+    height: 80%;
 }
 
 .flower {
-    background-image: url(../img/flower.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+    position: relative;
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-y: hidden;
+}
+
+#flower {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    object-fit: cover;
+    pointer-events: none;
+    max-height: 1440px;
 }
 
 .flower h1 {
@@ -73,15 +82,22 @@ a {
 }
 
 .brushes {
-    background-image: url(../img/brushes.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+
+#brushes {
+    position: absolute;
+    z-index: -9999;
+    top: 0;
+    width: 100vw;
+    /* max-height: 2100px; */
+    
 }
 
 .brushes-content {
@@ -89,21 +105,27 @@ a {
     flex-direction: column;
     width: 40%;
     align-items: center;
-    padding-right: 50px;
-    text-align:  justify;
+    padding-right: 100px;
+    text-align: justify;
     color: #6B4400;
 }
 
 .tree {
-    background-image: url(../img/tree.jpg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+#tree {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    width: 100vw;
+    
 }
 
 .tree-content {
@@ -112,43 +134,39 @@ a {
     width: 40%;
     align-items: center;
     padding: 0 20px;
-    text-align:  center;
+    text-align: center;
     color: white;
-    /* background-color: rgba(255, 255, 255, 0.75); */
 }
 
 .materials {
-    background-image: url(../img/materials.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     height: 80vh;
     width: 100vw;
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
+#materials {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    width: 100vw;
+}
+
 .materials-content {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
     align-items: center;
-    padding-right: 50px;
-    text-align:  justify;
+    padding-right: 100px;
+    text-align: justify;
     color: #000000;
+    /* z-index: 9999; */
 }
 
 /* Materials */
-
-.bg {
-    background-image: url('../img/flower.png');
-    background-size: cover;
-    /* height: 100vh; */
-    width: 100vw;
-    /* position: fixed; */
-    
-}
 
 #nav {
     display: flex;
@@ -187,7 +205,7 @@ a {
     justify-content: center;
     align-items: center;
     z-index: -99990;
-    
+
 }
 
 .accepted-content {
@@ -215,4 +233,13 @@ a {
     height: 70px;
     width: 100%;
     background-color: #0194213a;
+}
+
+/* Media Query */
+
+@media (max-width: 800px) {
+    .nav-content {
+        display: none;
+    }
+
 }

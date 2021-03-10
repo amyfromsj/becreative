@@ -13,9 +13,15 @@
     </nav>
     <section class="intro">
         <div class="flower">
-            <h1>Fostering creativity and the arts as a way to inspire communities to clean up the environment.</h1>
+            <img id="flower" src="img/flower.png" alt="flower-img">
+
+            <h1 class="animate__animated animate__fadeInUp">Fostering creativity and the arts as a way to inspire
+                communities to clean up the environment.</h1>
         </div>
+
         <div class="brushes">
+            <img id="brushes" src="img/brushes.png" alt="brushes-img">
+
             <div class="brushes-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
                 <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
@@ -25,17 +31,19 @@
                     Junky into Funky program.</p>
             </div>
         </div>
+
         <div class="tree">
+            <img id="tree" src="img/tree.jpg" alt="tree-img">
             <div class="tree-content">
-                <h1>REDUCE, REUSE, RECYCLE</h1>
-                <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
-                    store
-                    items for use in upcycling, repurposing, fix it and funky art projects with our Processing Center
-                    and
-                    Junky into Funky program.</p>
+                <h1>CREATE</h1>
+                <p>We aim to create a S.T.E.A.M. (Science, Technology, Engineering, Arts, Math) based Edutainment Center
+                    that specializes in A.R.T – Artistic Recycling Technology and by 2025 offer free STEAM based arts
+                    and creativity classes for kids.</p>
             </div>
         </div>
+
         <div class="materials">
+            <img id="materials" src="img/materials.png" alt="materials-img">
             <div class="materials-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
                 <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
@@ -45,9 +53,39 @@
                     Junky into Funky program.</p>
             </div>
         </div>
+
+
     </section>
 
-    
+    <script>
+        let flower = document.getElementById("flower");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            flower.style.top = value * .5 + 'px';
+        });
+
+        // Slide in Animation
+
+        $(window).scroll(function () {
+            var topofDiv = $(".brushes").offset().top;
+            var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+            var navHeight = $(".brushes-content").outerHeight();
+            if (scrollBottom > (topofDiv)) {
+                $(".brushes-content").addClass("animate__animated animate__backInRight");
+            }
+        });
+
+        $(window).scroll(function () {
+            var topofDiv = $(".tree").offset().top;
+            var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+            var navHeight = $(".tree-content").outerHeight();
+            if (scrollBottom > (topofDiv)) {
+                $(".tree-content").addClass("animate__animated animate__bounceInUp");
+            }
+        });
+
+    </script>
 </body>
 
 <%- include('partials/footer');%>
