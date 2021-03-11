@@ -38,11 +38,14 @@ a {
 }
 
 .nav-content {
-    flex-direction: row;
+    display: flex;
     align-items: center;
     justify-content: space-around;
-    display: flex;
     width: 60%;
+}
+
+.nav-content p {
+    margin: 0;
 }
 
 .logo {
@@ -161,9 +164,7 @@ a {
     width: 30%;
     align-items: center;
     padding-right: 100px;
-    text-align: justify;
     color: #000000;
-    /* z-index: 9999; */
 }
 
 /* Materials */
@@ -183,6 +184,10 @@ a {
     justify-content: space-around;
     padding: 10px 0;
     color: black;
+}
+
+.bg {
+    background-image: url('img/flower.png');
 }
 
 .page-title {
@@ -234,6 +239,28 @@ a {
     width: 100%;
     background-color: #0194213a;
 }
+
+/* bootstrap */
+
+.donate-btn {
+    margin: 0;
+    border-radius: 100px;
+    border: black 1px solid;
+    width: 100px;
+    height: 35px;
+    color: black;
+    background-color: transparent;
+}
+.donate-btn a:visited {
+    color: inherit;
+}
+
+.donate-btn:hover {
+    background-color: #8DB596;
+    border: rgba(255, 255, 255, 0) 1px solid;
+    color: white;
+}
+
 
 /* Media Query */
 
