@@ -8,7 +8,7 @@
             <p>Events</p>
             <p>Showcase</p>
             <p>About Us</p>
-            <button class="btn donate-btn"><a href="/materials">Donate</a></button>
+            <button class="donate-btn"><a href="/materials">Donate</a></button>
         </div>
     </nav>
     <section class="intro">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="brushes">
-            <img id="brushes" src="img/brushes.png" alt="brushes-img">
+            <img id="brushes" class="filter" src="img/brushes.png" alt="brushes-img">
 
             <div class="brushes-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="tree">
-            <img id="tree" src="img/tree.jpg" alt="tree-img">
+            <img id="tree" class="filter" src="img/tree.jpg" alt="tree-img">
             <div class="tree-content">
                 <h1>CREATE</h1>
                 <p>We aim to create a S.T.E.A.M. (Science, Technology, Engineering, Arts, Math) based Edutainment Center
@@ -43,7 +43,7 @@
         </div>
 
         <div class="materials">
-            <img id="materials" src="img/materials.png" alt="materials-img">
+            <img id="materials" class="filter" src="img/materials.png" alt="materials-img">
             <div class="materials-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
                 <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
@@ -54,37 +54,63 @@
             </div>
         </div>
 
+        <footer>
+            <div>
+                <img src="img/logo-light.png" alt="logo-img">
+                <h5>BeCreative Zone</h5>
+                <ul>
+                    <li>501C3 Documentss Supplied upon request.</li>
+                    <li>EIN: 33-0776908</li>
+                    <li>Phone: (760) 633-3012</li>
+                    <li>Email: info@becreative.zone</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Donate</h5>
+                <ul>
+                    <li>Materials</li>
+                    <li>Financial</li>
+                </ul>
+            </div>
+            <div>
+                <h5>About Us</h5>
+                <ul>
+                    <li>Our Mission</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+
+        </footer>
+
 
     </section>
 
     <script>
+        // Parallax
         let flower = document.getElementById("flower");
-
         window.addEventListener('scroll', function () {
             var value = window.scrollY;
             flower.style.top = value * .5 + 'px';
         });
 
         // Slide in Animation
-
         $(window).scroll(function () {
             var topofDiv = $(".brushes").offset().top;
             var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-            var navHeight = $(".brushes-content").outerHeight();
+            var divHeight = $(".brushes-content").outerHeight();
             if (scrollBottom > (topofDiv)) {
                 $(".brushes-content").addClass("animate__animated animate__backInRight");
             }
         });
 
-        $(window).scroll(function () {
-            var topofDiv = $(".tree").offset().top;
-            var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-            var navHeight = $(".tree-content").outerHeight();
-            if (scrollBottom > (topofDiv)) {
-                $(".tree-content").addClass("animate__animated animate__bounceInUp");
-            }
-        });
-
+        // $(window).scroll(function () {
+        //     var topofDiv = $(".tree").offset().top;
+        //     var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+        //     var divHeight = $(".tree-content").outerHeight();
+        //     if (scrollBottom > (topofDiv)) {
+        //         $(".tree-content").addClass("animate__animated animate__bounceInUp");
+        //     }
+        // });
     </script>
 </body>
 

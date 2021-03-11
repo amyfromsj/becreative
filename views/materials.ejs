@@ -1,6 +1,33 @@
-<%- include('partials/header');%>
-<div class="bg">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,900&family=Raleway:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>BeCreative Zone</title>
+</head>
+
+
+<div style="position: relative;">
+    <div class="bg">
     </div>
+</div>
 <section id="nav">
     <div class="page-nav">
         <a class="logo" href="/"></a>
@@ -9,21 +36,95 @@
             <p>Events</p>
             <p>Showcase</p>
             <p>About Us</p>
-            <button class="btn donate-btn"><a href="/materials">Donate</a></button>
+            <button class="donate-btn"><a href="/materials">Donate</a></button>
         </div>
     </div>
     <div class="page-title">
-        <h5>Donate Materials</h5>
+        <p style="font-weight: bold;">Donate Materials</p>
     </div>
 </section>
 
-<section class="accepted">
+<section class="row" style="display: flex; flex-direction: column;">
     <div class="accepted-content">
         <p>Please look through the list of materials and make an appointment below to drop off your donation.</p>
         <div class="accepted-bg">Accepted Content</div>
-    </div>
-</section>
 
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img/bottles.jpg" alt="bottles-img">
+                <h6>PLASTIC BOTTLES</h6>
+                <p>All Sizes, With Or Without Cap</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/paintbrushes.jpg" alt="brushes-img">
+                <h6>PAINTBRUSHES</h6>
+                <p>Paintbrushes, Makeup Brushes, Used Brushes</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/classroom.jpg" alt="brushes-img">
+                <h6>CLASSROOM SUPPLIES</h6>
+                <p>Folders, Paper, Notebooks, Paper Clips, Staplers, Rulers </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img/supplies.jpg" alt="craft-img">
+                <h6>CRAFT SUPPLIES</h6>
+                <p>Scissors, Glue, Glitter, Planters</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/nature.jpg" alt="nature-img">
+                <h6>NATURE BITS</h6>
+                <p>Scissors, Glue, Glitter, Planters</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/scrap.jpg" alt="scrapbooking-img">
+                <h6>SCRAPBOOKING MATERIALS</h6>
+                <p>Cards, Stamps, Paper Stencils, Albums</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img/arts.jpg" alt="fine-arts-img">
+                <h6>FINE ARTS</h6>
+                <p>Cards, Stamps, Paper Stencils, Albums</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/jewelry.jpg" alt="jewelry-img">
+                <h6>JEWELRY</h6>
+                <p>Cards, Stamps, Paper Stencils, Albums</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/sewing.jpg" alt="sewing-img">
+                <h6>SEWING</h6>
+                <p>Needles, Buttons, Leather, Rulers, Zippers, Ribbons</p>
+            </div>
+        </div>
+
+        <div class="nonaccepted-bg">Non-Accepted Content</div>
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="img/clothes.jpg" alt="clothes-img">
+                <h6>USED CLOTHING</h6>
+                <p>Used Fabrics, Clothing</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/devices.jpg" alt="devices-img">
+                <h6>HAZARDOUS DEVICES</h6>
+                <p>Old Devices, Hazardous Technology</p>
+            </div>
+            <div class="col-lg-4">
+                <img src="img/chemicals.jpg" alt="chemicals-img">
+                <h6>CHEMICALS</h6>
+                <p>Toxic Materials, Harmful Chemicals</p>
+            </div>
+        </div>
+<button class="appointment-btn">Make an Appointment</button>
+    </div>
+
+    
+</section>
 
 <script>
 
