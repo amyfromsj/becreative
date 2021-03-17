@@ -23,14 +23,32 @@
     <title>BeCreative Zone</title>
 </head>
 
+<body>
+    <div style="z-index: 0;" class="mobile-menu">           
+        <ul>
+            <li>Learn</li>
+            <li>Events</li>
+            <li>Showcase</li>
+            <li>About Us</li>
+        </ul>
+        <button class="donate-btn"><a href="/materials">Donate</a></button>
 
+    </ul>
+</div>
 <div style="position: relative;">
     <div class="bg">
     </div>
 </div>
 <section id="nav">
     <div class="page-nav">
-        <a class="logo" href="/"></a>
+        <a class="logo" href="/">
+        <img  src="img/logo.png" alt="">
+        </a>
+        <div class="mobile-nav">
+            <img id="menu" style="height: 2rem;" src="img/hamburger.png" alt="hamburger-menu">
+            <img id="cross" style="height: 2rem; display: none;" src="img/cross.png" alt="cross">
+        </div>
+        
         <div class="nav-content">
             <p>Learn</p>
             <p>Events</p>
@@ -127,6 +145,22 @@
 </section>
 
 <script>
+        // Mobile Menu
+        // Mobile Menu
+        $('#menu').on('click', function() {
+                $('.mobile-menu').slideToggle();
+                $('.mobile-menu').css('display', 'flex');
+                $('#menu').css('display', 'none');
+                $('#cross').css('display', 'block');
+            })
 
+            $('#cross').on('click', function() {
+                $('.mobile-menu').slideToggle();
+                $('#menu').css('display', 'block');
+                $(this).css('display', 'none');
+            })
 </script>
+
+</body>
+
 <%- include('partials/footer');%>

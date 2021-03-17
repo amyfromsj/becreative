@@ -50,7 +50,7 @@ ul {
     padding: 10px 0;
     color: black;
     z-index: 9999;
-    
+
 }
 
 .home-nav p {
@@ -93,13 +93,34 @@ ul {
 }
 
 .logo {
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 14%;
-    height: 80%;
+    height: 80px;
+    width: 80px;
 }
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-menu {
+    text-align: center;
+    z-index: 99;
+    color: black;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*  */
 
 .flower {
     position: relative;
@@ -260,7 +281,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 50px 0;
     color: black;
 
 }
@@ -291,6 +312,7 @@ h1 {
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
+    
 }
 
 .page-title p {
@@ -304,7 +326,6 @@ h1 {
     justify-content: center;
     align-items: center;
     z-index: -99990;
-
 }
 
 .accepted-content {
@@ -313,12 +334,16 @@ h1 {
     background-repeat: no-repeat;
     background-size: contain;
     color: black;
-    height: 100rem;
+    /* height: 100rem; */
     width: 80vw;
     border-radius: 10px;
     padding: 30px 0 0;
     text-align: center;
     margin: 200px auto 200px;
+}
+
+.accepted-content p {
+    padding: 30px;
 }
 
 .accepted-bg {
@@ -363,13 +388,23 @@ footer div {
 
 @media (max-width: 800px) {
 
-    .home-nav {
-        align-items: flex-start;
-        justify-content: flex-start;
+    nav {
+        align-items: center;
+        justify-content: space-between;
+
     }
 
     .nav-content {
         display: none;
+    }
+
+    .page-nav {
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    .mobile-nav {
+        display: block;
     }
 
 }
@@ -384,9 +419,6 @@ footer div {
 
     img {
         height: 100%;
-    }
-    .accepted-content {
-        height: 230rem;
     }
 
 }

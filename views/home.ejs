@@ -1,8 +1,27 @@
 <%- include('partials/header'); %>
 
 <body>
+    <div  class="mobile-menu">           
+        <ul>
+            <li>Learn</li>
+            <li>Events</li>
+            <li>Showcase</li>
+            <li>About Us</li>
+        </ul>
+        <button class="donate-btn"><a href="/materials">Donate</a></button>
+
+    </ul>
+</div>
+
     <nav class="home-nav">
-        <a class="logo" href="/"></a>
+        <a class="logo" href="/">
+        <img  src="img/logo.png" alt="">
+        </a>
+        <div class="mobile-nav">
+            <img id="menu" style="height: 2rem;" src="img/hamburger.png" alt="hamburger-menu">
+            <img id="cross" style="height: 2rem; display: none;" src="img/cross.png" alt="cross">
+        </div>
+
         <div class="nav-content">
             <p>Learn</p>
             <p>Events</p>
@@ -111,6 +130,21 @@
         //         $(".tree-content").addClass("animate__animated animate__bounceInUp");
         //     }
         // });
+
+        // Mobile Menu
+            $('#menu').on('click', function() {
+                $('.mobile-menu').slideToggle();
+                $('.mobile-menu').css('display', 'flex');
+                $('#menu').css('display', 'none');
+                $('#cross').css('display', 'block');
+            })
+
+            $('#cross').on('click', function() {
+                $('.mobile-menu').slideToggle();
+                $('#menu').css('display', 'block');
+                $(this).css('display', 'none');
+            })
+
     </script>
 </body>
 
