@@ -6,7 +6,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-    height: 70rem;
+    /* height: 70rem; */
+    overflow-x: hidden ;
 }
 
 h1 {
@@ -28,15 +29,9 @@ ul {
 
 /* Home */
 
-.intro p {
-    font-weight: bold;
-}
-
 .filter {
     filter: sepia(.08) saturate(.9);
 }
-
-
 
 .home-nav {
     background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
@@ -138,7 +133,9 @@ ul {
     top: 0;
     object-fit: cover;
     pointer-events: none;
-    max-height: 1440px;
+    /* max-height: 1440px; */
+    width: 100vw;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -152,20 +149,11 @@ h1 {
 .brushes {
     height: 80vh;
     width: 100vw;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-end; */
     overflow: hidden;
     position: relative;
-}
-
-#brushes {
-    position: absolute;
-    z-index: -9999;
-    top: 0;
-    width: 100vw;
-    /* max-height: 2100px; */
-
 }
 
 .brushes-content {
@@ -176,14 +164,16 @@ h1 {
     padding-right: 100px;
     text-align: justify;
     color: #6B4400;
+    z-index: 2;
+    position: relative;
 }
 
 .tree {
     height: 80vh;
     width: 100vw;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     overflow: hidden;
     position: relative;
 }
@@ -232,6 +222,42 @@ h1 {
     padding-right: 100px;
     color: #000000;
     align-items: flex-end;
+}
+
+.events {
+    height: 50rem;
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    color: black;
+    transition: all .2s ease-in-out ;
+    background-color: rgb(241, 241, 241);
+}
+
+.card .btn {
+    background-color: black;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+/* Parallax */
+
+.parallax {
+    min-height: 800px;
+    background: transparent;
 }
 
 /* Materials */
@@ -330,7 +356,6 @@ h1 {
 
 .accepted-content {
     background-color: white;
-    /* background-image: url('../img/check_circle_outline-black-18dp.svg') ; */
     background-repeat: no-repeat;
     background-size: contain;
     color: black;
@@ -371,8 +396,8 @@ footer {
     height: 25rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 20%;
+    justify-content: flex-start;
+    margin: 0 10%;
 
 }
 
@@ -382,6 +407,7 @@ footer div {
     justify-content: space-around;
     flex-direction: column;
     text-align: left;
+    margin-right: 3rem;
 }
 
 /* Media Query */

@@ -1,7 +1,7 @@
 <%- include('partials/header'); %>
 
 <body>
-    <div  class="mobile-menu">           
+    <div class="mobile-menu">
         <ul>
             <li>Learn</li>
             <li>Events</li>
@@ -10,12 +10,12 @@
         </ul>
         <button class="donate-btn"><a href="/materials">Donate</a></button>
 
-    </ul>
-</div>
+        </ul>
+    </div>
 
     <nav class="home-nav">
         <a class="logo" href="/">
-        <img  src="img/logo.png" alt="">
+            <img src="img/logo.png" alt="">
         </a>
         <div class="mobile-nav">
             <img id="menu" style="height: 2rem;" src="img/hamburger.png" alt="hamburger-menu">
@@ -38,9 +38,10 @@
                 communities to clean up the environment.</h1>
         </div>
 
-        <div class="brushes">
-            <img id="brushes" class="filter" src="img/brushes.png" alt="brushes-img">
 
+        <div class="brushes">
+            <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/brushes.jpg">
+            </div>
             <div class="brushes-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
                 <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
@@ -51,8 +52,22 @@
             </div>
         </div>
 
+        <!-- <div class="brushes">
+            <img id="brushes" class="filter" src="img/brushes.jpg" alt="brushes-img">
+
+            <div class="brushes-content">
+                <h1>REDUCE, REUSE, RECYCLE</h1>
+                <p>Our Purpose is to get creative with stuff we SAVE from the landfill; deconstruct, sort, clean and
+                    store
+                    items for use in upcycling, repurposing, fix it and funky art projects with our Processing Center
+                    and
+                    Junky into Funky program.</p>
+            </div>
+        </div> -->
+
         <div class="tree">
-            <img id="tree" class="filter" src="img/tree.jpg" alt="tree-img">
+            <div class="parallax" data-parallax="scroll" data-z-index="1" data-image-src="img/tree.jpg">
+            </div>
             <div class="tree-content">
                 <h1>CREATE</h1>
                 <p>We aim to create a S.T.E.A.M. (Science, Technology, Engineering, Arts, Math) based Edutainment Center
@@ -61,7 +76,8 @@
             </div>
         </div>
 
-        <div class="materials">
+
+        <!-- <div class="materials">
             <img id="materials" class="filter" src="img/materials.png" alt="materials-img">
             <div class="materials-content">
                 <h1>REDUCE, REUSE, RECYCLE</h1>
@@ -71,7 +87,57 @@
                     and
                     Junky into Funky program.</p>
             </div>
-        </div>
+        </div> -->
+
+        <section class="events">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="cardContainer col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/event-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Water Bottle Art</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End card 1 -->
+
+                <!-- Card 2 -->
+                <div class="cardContainer col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/event-2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Mug Workshop</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End card 2 -->
+
+                <!-- Card 3 -->
+                <div class="cardContainer col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/event-3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Toilet Paper Roll Recycling</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's
+                                content.</p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End card 3 -->
+
+            </div>
+        </section>
 
         <footer>
             <div>
@@ -102,6 +168,7 @@
         </footer>
 
 
+
     </section>
 
     <script>
@@ -118,7 +185,9 @@
             var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
             var divHeight = $(".brushes-content").outerHeight();
             if (scrollBottom > (topofDiv)) {
-                $(".brushes-content").addClass("animate__animated animate__backInRight");
+                $(".brushes-content").addClass("animate__animated animate__slideInRight");
+                console.log(scrollBottom);
+                console.log(topofDiv);
             }
         });
 
@@ -132,20 +201,21 @@
         // });
 
         // Mobile Menu
-            $('#menu').on('click', function() {
-                $('.mobile-menu').slideToggle();
-                $('.mobile-menu').css('display', 'flex');
-                $('#menu').css('display', 'none');
-                $('#cross').css('display', 'block');
-            })
+        $('#menu').on('click', function () {
+            $('.mobile-menu').slideToggle();
+            $('.mobile-menu').css('display', 'flex');
+            $('#menu').css('display', 'none');
+            $('#cross').css('display', 'block');
+        })
 
-            $('#cross').on('click', function() {
-                $('.mobile-menu').slideToggle();
-                $('#menu').css('display', 'block');
-                $(this).css('display', 'none');
-            })
-
+        $('#cross').on('click', function () {
+            $('.mobile-menu').slideToggle();
+            $('#menu').css('display', 'block');
+            $(this).css('display', 'none');
+        })
     </script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 </body>
 
 <%- include('partials/footer');%>
